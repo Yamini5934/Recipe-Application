@@ -1,0 +1,85 @@
+.filter-panel {
+  background: #f0f8ff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(30, 144, 255, 0.2);
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+.filter-panel h2 {
+  text-align: center;
+  color: #1e90ff;
+  margin-bottom: 20px;
+}
+
+.diet-select {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.diet-select label {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #333;
+}
+
+.diet-select select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 2px solid #1e90ff;
+  font-size: 14px;
+}
+
+.ingredient-select h3 {
+  color: #1e90ff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.ingredient-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.ingredient-btn {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 2px solid #1e90ff;
+  background: white;
+  color: #1e90ff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ingredient-btn:hover {
+  background: #e6f3ff;
+}
+
+.ingredient-btn.active {
+  background: #1e90ff;
+  color: white;
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.4);
+}
+
+.search-btn {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #1e90ff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-btn:hover {
+  background: #0f4c81;
+}

@@ -1,0 +1,10 @@
+.serving-size {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.serving-size select {
+  padding: 10px;
+  border: 1px solid #00aaff;
+  border-radius: 8px;
+}

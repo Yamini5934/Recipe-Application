@@ -1,0 +1,61 @@
+.nutrition {
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: left;
+  background: #f0faff;
+  border-left: 5px solid #00aaff;
+  padding: 15px;
+}
+
+
+/* 📱 Responsive Media Queries for Nutrition Section */
+
+/* Small Mobiles (≤480px) */
+@media (max-width: 480px) {
+  .nutrition {
+    max-width: 100%;
+    padding: 10px;
+    font-size: 13px;
+    margin: 15px auto;
+  }
+}
+
+/* Tablets (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .nutrition {
+    max-width: 90%;
+    padding: 12px;
+    font-size: 14px;
+    margin: 18px auto;
+  }
+}
+
+/* Small Laptops (769px – 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nutrition {
+    max-width: 350px;
+    padding: 14px;
+    font-size: 15px;
+    margin: 20px auto;
+  }
+}
+
+/* Large Screens (1025px – 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .nutrition {
+    max-width: 400px;
+    padding: 15px;
+    font-size: 16px;
+    margin: 22px auto;
+  }
+}
+
+/* Extra Large Screens (≥1441px) */
+@media (min-width: 1441px) {
+  .nutrition {
+    max-width: 450px;
+    padding: 16px;
+    font-size: 17px;
+    margin: 25px auto;
+  }
+}

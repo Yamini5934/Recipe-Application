@@ -1,0 +1,37 @@
+.ingredient-select {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.ingredient-select h3 {
+  color: #1e90ff;
+  margin-bottom: 10px;
+}
+
+.ingredient-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.ingredient-btn {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 2px solid #1e90ff;
+  background: white;
+  color: #1e90ff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ingredient-btn:hover {
+  background: #e6f3ff;
+}
+
+.ingredient-btn.active {
+  background: #1e90ff;
+  color: white;
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.4);
+}

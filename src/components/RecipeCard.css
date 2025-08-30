@@ -1,0 +1,344 @@
+/* 🔹 General Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  background: #0288d1;
+  color: white;
+  padding: 18px 0;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 15px 0;
+  background: #f2f2f2;
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.recipe-section {
+  flex: 1;
+  padding: 20px;
+}
+
+/* 🔍 Ingredient Input / Search */
+.ingredient-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 25px auto;
+  max-width: 600px;
+}
+
+.ingredient-input input {
+  flex: 1;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1.5px solid #b3e5fc;
+  font-size: 16px;
+  outline: none;
+  color: #033e5b;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.ingredient-input input::placeholder {
+  color: #7aa6c2;
+  font-style: italic;
+}
+
+.ingredient-input input:focus {
+  border-color: #0288d1;
+  box-shadow: 0 0 8px rgba(2, 136, 209, 0.25);
+  background: #ffffff;
+}
+
+.ingredient-input button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 22px;
+  background: linear-gradient(135deg, #0288d1, #01579b);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ingredient-input button:hover {
+  background: linear-gradient(135deg, #0277bd, #014d82);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(2, 136, 209, 0.3);
+}
+
+/* 🔹 Recipe List Grid */
+.recipe-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* 🔹 Favorites Section */
+.favorites-section {
+  padding: 20px;
+  background: #f9f9f9;
+  margin-top: 20px;
+}
+
+.favorites-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+/* 📱 Responsive Media Queries */
+/* 📱 Responsive Media Queries Updated for All Applications */
+
+/* Small Mobiles (≤480px) */
+@media (max-width: 480px) {
+  .recipe-section {
+    padding: 10px;
+  }
+
+  .ingredient-input {
+    flex-direction: column;
+    width: 95%;
+    gap: 10px;
+  }
+
+  .ingredient-input input,
+  .ingredient-input button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .recipe-card img {
+    height: 140px;
+  }
+
+  .recipe-content h3 {
+    font-size: 1rem;
+  }
+
+  .recipe-content p {
+    font-size: 0.85rem;
+  }
+
+  .recipe-btn,
+  .fav-btn {
+    width: 100%;
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+
+  .fav-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  .favorites-section {
+    padding: 12px;
+  }
+
+  .app-header {
+    font-size: 1.4rem;
+    padding: 12px 0;
+  }
+
+  .app-footer {
+    font-size: 0.8rem;
+    padding: 10px 0;
+  }
+}
+
+/* Tablets (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .recipe-section {
+    padding: 16px;
+  }
+
+  .ingredient-input input,
+  .ingredient-input button {
+    font-size: 15px;
+    padding: 12px 14px;
+  }
+
+  .recipe-card img {
+    height: 160px;
+  }
+
+  .recipe-content h3 {
+    font-size: 1.05rem;
+  }
+
+  .recipe-content p {
+    font-size: 0.9rem;
+  }
+
+  .recipe-btn,
+  .fav-btn {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  .favorites-section {
+    padding: 16px;
+  }
+
+  .app-header {
+    font-size: 1.6rem;
+    padding: 14px 0;
+  }
+
+  .app-footer {
+    font-size: 0.85rem;
+    padding: 12px 0;
+  }
+}
+
+/* Small Laptops (769px – 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .recipe-section {
+    padding: 18px;
+  }
+
+  .ingredient-input input,
+  .ingredient-input button {
+    font-size: 16px;
+    padding: 14px 16px;
+  }
+
+  .recipe-card img {
+    height: 180px;
+  }
+
+  .recipe-content h3 {
+    font-size: 1.15rem;
+  }
+
+  .recipe-content p {
+    font-size: 0.95rem;
+  }
+
+  .recipe-btn,
+  .fav-btn {
+    font-size: 1rem;
+    padding: 12px 14px;
+  }
+
+  .favorites-section {
+    padding: 18px;
+  }
+
+  .app-header {
+    font-size: 1.8rem;
+    padding: 16px 0;
+  }
+
+  .app-footer {
+    font-size: 0.9rem;
+    padding: 14px 0;
+  }
+}
+
+/* Large Screens (1025px – 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .recipe-section {
+    padding: 20px 30px;
+  }
+
+  .ingredient-input input,
+  .ingredient-input button {
+    font-size: 17px;
+    padding: 16px 18px;
+  }
+
+  .recipe-card img {
+    height: 200px;
+  }
+
+  .recipe-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .recipe-content p {
+    font-size: 1rem;
+  }
+
+  .recipe-btn,
+  .fav-btn {
+    font-size: 1.05rem;
+    padding: 14px 16px;
+  }
+
+  .favorites-section {
+    padding: 20px 30px;
+  }
+
+  .app-header {
+    font-size: 2rem;
+    padding: 18px 0;
+  }
+
+  .app-footer {
+    font-size: 0.95rem;
+    padding: 16px 0;
+  }
+}
+
+/* Extra Large Screens (≥1441px) */
+@media (min-width: 1441px) {
+  .recipe-section {
+    padding: 24px 50px;
+  }
+
+  .ingredient-input input,
+  .ingredient-input button {
+    font-size: 18px;
+    padding: 18px 20px;
+  }
+
+  .recipe-card img {
+    height: 220px;
+  }
+
+  .recipe-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .recipe-content p {
+    font-size: 1.05rem;
+  }
+
+  .recipe-btn,
+  .fav-btn {
+    font-size: 1.1rem;
+    padding: 16px 18px;
+  }
+
+  .favorites-section {
+    padding: 24px 50px;
+  }
+
+  .app-header {
+    font-size: 2.2rem;
+    padding: 20px 0;
+  }
+
+  .app-footer {
+    font-size: 1rem;
+    padding: 18px 0;
+  }
+}

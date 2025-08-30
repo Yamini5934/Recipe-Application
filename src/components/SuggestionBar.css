@@ -1,0 +1,10 @@
+.suggestion-bar {
+  text-align: center;
+  background: #f0faff;
+  padding: 10px;
+  border-radius: 12px;
+  color: #005a99;
+  font-weight: 500;
+  margin: 10px auto;
+  width: fit-content;
+}

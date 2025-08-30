@@ -1,0 +1,26 @@
+.filters-container {
+  max-width: 980px;
+  margin: 12px auto;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 160px;
+}
+
+.filter-group label {
+  font-weight: 700;
+  color: #05668d;
+}
+.filter-group select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1.5px solid #cfeefd;
+}

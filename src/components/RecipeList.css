@@ -1,0 +1,298 @@
+/* 🔹 General Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  background: #0288d1;
+  color: white;
+  padding: 18px 0;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 15px 0;
+  background: #f2f2f2;
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.recipe-section {
+  flex: 1;
+  padding: 20px;
+}
+
+/* 🔍 Search Box & Button */
+.search-container {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.search-box {
+  width: 75%;
+  max-width: 500px;
+  padding: 12px 16px;
+  border: 2px solid #0288d1;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-box:focus {
+  border-color: #01579b;
+  background: #e1f5fe;
+}
+
+.search-btn {
+  margin-left: 10px;
+  background: #0288d1;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  background: #01579b;
+}
+
+/* 📋 Recipe List Grid */
+.recipe-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* 📌 Recipe Card */
+.recipe-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.recipe-card h3 {
+  color: #0288d1;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+/* 🔹 Favorites Section */
+.favorites-section {
+  padding: 20px;
+  background: #f9f9f9;
+  margin-top: 20px;
+}
+
+.favorites-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+/* 📱 Responsive Media Queries */
+/* 📱 Responsive Media Queries for all applications */
+
+/* Small Mobiles (≤480px) */
+@media (max-width: 480px) {
+  /* Search Box */
+  .search-box {
+    width: 90%;
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+  .search-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  /* Recipe Cards */
+  .recipe-card img {
+    height: 140px;
+  }
+  .recipe-card h3 {
+    font-size: 1rem;
+  }
+  .recipe-section {
+    padding: 12px;
+  }
+
+  /* Favorites Section */
+  .favorites-section {
+    padding: 12px;
+  }
+
+  /* Header/Footer */
+  .app-header {
+    font-size: 1.4rem;
+    padding: 12px 0;
+  }
+  .app-footer {
+    font-size: 0.8rem;
+    padding: 10px 0;
+  }
+}
+
+/* Tablets (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .search-box {
+    width: 80%;
+    font-size: 1rem;
+    padding: 12px 14px;
+  }
+  .search-btn {
+    font-size: 1rem;
+    padding: 10px 14px;
+  }
+
+  .recipe-card img {
+    height: 160px;
+  }
+  .recipe-card h3 {
+    font-size: 1.1rem;
+  }
+  .recipe-section {
+    padding: 16px;
+  }
+  .favorites-section {
+    padding: 16px;
+  }
+
+  .app-header {
+    font-size: 1.6rem;
+    padding: 14px 0;
+  }
+  .app-footer {
+    font-size: 0.85rem;
+    padding: 12px 0;
+  }
+}
+
+/* Small Laptops (769px – 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .search-box {
+    width: 75%;
+    font-size: 1.05rem;
+    padding: 12px 16px;
+  }
+  .search-btn {
+    font-size: 1.05rem;
+    padding: 12px 16px;
+  }
+
+  .recipe-card img {
+    height: 180px;
+  }
+  .recipe-card h3 {
+    font-size: 1.15rem;
+  }
+  .recipe-section {
+    padding: 18px;
+  }
+  .favorites-section {
+    padding: 18px;
+  }
+
+  .app-header {
+    font-size: 1.8rem;
+    padding: 16px 0;
+  }
+  .app-footer {
+    font-size: 0.9rem;
+    padding: 14px 0;
+  }
+}
+
+/* Large Screens (1025px – 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .search-box {
+    width: 60%;
+    font-size: 1.1rem;
+    padding: 14px 18px;
+  }
+  .search-btn {
+    font-size: 1.1rem;
+    padding: 12px 18px;
+  }
+
+  .recipe-card img {
+    height: 200px;
+  }
+  .recipe-card h3 {
+    font-size: 1.2rem;
+  }
+  .recipe-section {
+    padding: 20px 30px;
+  }
+  .favorites-section {
+    padding: 20px 30px;
+  }
+
+  .app-header {
+    font-size: 2rem;
+    padding: 18px 0;
+  }
+  .app-footer {
+    font-size: 0.95rem;
+    padding: 16px 0;
+  }
+}
+
+/* Extra Large Screens (≥1441px) */
+@media (min-width: 1441px) {
+  .search-box {
+    width: 50%;
+    font-size: 1.15rem;
+    padding: 16px 20px;
+  }
+  .search-btn {
+    font-size: 1.15rem;
+    padding: 14px 20px;
+  }
+
+  .recipe-card img {
+    height: 220px;
+  }
+  .recipe-card h3 {
+    font-size: 1.25rem;
+  }
+  .recipe-section {
+    padding: 24px 50px;
+  }
+  .favorites-section {
+    padding: 24px 50px;
+  }
+
+  .app-header {
+    font-size: 2.2rem;
+    padding: 20px 0;
+  }
+  .app-footer {
+    font-size: 1rem;
+    padding: 18px 0;
+  }
+}

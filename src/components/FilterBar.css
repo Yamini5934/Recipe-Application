@@ -1,0 +1,85 @@
+.filter-bar {
+  background: #e6f7ff;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 85%;
+  max-width: 900px;
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.15);
+  text-align: center;
+}
+
+.filter-bar h2 {
+  color: #023e8a;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.diet-section {
+  margin-bottom: 1.5rem;
+}
+
+.diet-section label {
+  font-size: 1.1rem;
+  margin-right: 10px;
+  color: #0077b6;
+}
+
+.filter-bar select {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 2px solid #00b4d8;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+/* Ingredients */
+.ingredients-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.ingredient-btn {
+  border: 2px solid #0096c7;
+  padding: 8px 16px;
+  border-radius: 25px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  color: #0077b6;
+}
+
+.ingredient-btn:hover {
+  background: #caf0f8;
+  transform: scale(1.05);
+}
+
+.ingredient-btn.selected {
+  background: #0077b6;
+  color: white;
+  font-weight: 600;
+}
+
+/* Search Button */
+.search-btn {
+  margin-top: 1.8rem;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  background: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.search-btn:hover {
+  background: #023e8a;
+  transform: scale(1.05);
+}
