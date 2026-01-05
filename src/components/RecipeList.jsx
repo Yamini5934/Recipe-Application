@@ -1,22 +1,38 @@
-import React from "react";
-import recipes from "../data/recipes";
-import RecipeCard from "./RecipeCard";  // ✅ use RecipeCard
+import React, { useEffect, useState } from "react";
+import RecipeCard from "./RecipeCard"; // ✅ same
 import "./RecipeList.css";
+import { fetchRecipes } from "../api/recipeApi"; // ✅ NEW
 
-const RecipeList = ({ searchQuery, onRecipeClick, onToggleFavorite, favorites }) => {
-  // Split search query into multiple ingredients
+const RecipeList = ({
+  searchQuery,
+  onRecipeClick,
+  onToggleFavorite,
+  favorites,
+}) => {
+  const [recipes, setRecipes] = useState([]);
+
+  // 🔹 API call once on mount (no query param)
+  useEffect(() => {
+    const loadRecipes = async () => {
+      const data = await fetchRecipes(); // fetch all recipes once
+      setRecipes(data);
+    };
+
+    loadRecipes();
+  }, []);
+
+  // 🔹 Ingredient-based filtering (same as before)
   const queryIngredients = searchQuery
     .toLowerCase()
-    .split(",") // allow comma separation
-    .join(" ") // replace commas with spaces
-    .split(" ") // split by spaces
-    .filter((ing) => ing.trim() !== ""); // remove empty strings
+    .split(",")
+    .join(" ")
+    .split(" ")
+    .filter((ing) => ing.trim() !== "");
 
   const filteredRecipes =
     queryIngredients.length === 0
-      ? recipes // show all if nothing searched
+      ? recipes
       : recipes.filter((recipe) =>
-          // check if ALL query ingredients are present in recipe
           queryIngredients.every((q) =>
             recipe.ingredients.some((ing) =>
               ing.toLowerCase().includes(q)
@@ -32,12 +48,16 @@ const RecipeList = ({ searchQuery, onRecipeClick, onToggleFavorite, favorites })
             key={recipe.id}
             recipe={recipe}
             onClick={() => onRecipeClick(recipe)}
-            onToggleFavorite={onToggleFavorite}   // ✅ FIXED: renamed prop
-            isFavorite={favorites.some((fav) => fav.name === recipe.name)} // ✅ boolean
+            onToggleFavorite={onToggleFavorite} // ✅ same
+            isFavorite={favorites.some(
+              (fav) => fav.name === recipe.name
+            )}
           />
         ))
       ) : (
-        <p className="no-results">No recipes found. Try different ingredients!</p>
+        <p className="no-results">
+          No recipes found. Try different ingredients!
+        </p>
       )}
     </div>
   );

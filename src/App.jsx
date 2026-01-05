@@ -24,29 +24,26 @@ const App = () => {
   return (
     <div className="app-container">
       {/* 🔹 Header */}
-      <header className="app-header">
-        🍳 Smart Recipe Generator
-      </header>
+      <header className="app-header">🍳 Smart Recipe Generator</header>
 
       {/* 🔹 Search / Ingredients Input */}
       <div className="recipe-section">
-        {!selectedRecipe && (
-          <IngredientInput setSearchQuery={setSearchQuery} />
-        )}
+        {!selectedRecipe && <IngredientInput setSearchQuery={setSearchQuery} />}
 
         {/* 🔹 Recipe List OR Recipe Detail */}
         {selectedRecipe ? (
           <RecipeDetail
             recipe={selectedRecipe}
+            searchQuery={searchQuery}
             onBack={() => setSelectedRecipe(null)}
-            onToggleFavorite={toggleFavorite} // ✅ updated
-            isFavorite={favorites.some((fav) => fav.name === selectedRecipe.name)} // ✅ pass favorite state
+            onToggleFavorite={toggleFavorite}
+            isFavorite={favorites.some((fav) => fav.name === selectedRecipe.name)}
           />
         ) : (
           <RecipeList
             searchQuery={searchQuery}
             onRecipeClick={setSelectedRecipe}
-            onToggleFavorite={toggleFavorite} // ✅ updated
+            onToggleFavorite={toggleFavorite}
             favorites={favorites}
           />
         )}
@@ -55,7 +52,8 @@ const App = () => {
       {/* 🔹 Favorites Section */}
       <Favorites
         favorites={favorites}
-        removeFromFavorites={toggleFavorite} // ✅ can reuse toggle
+        removeFromFavorites={toggleFavorite}
+        onViewRecipe={setSelectedRecipe}
       />
 
       {/* 🔹 Footer */}
